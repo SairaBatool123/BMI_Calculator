@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>BMI CALCULATER</h1>
 
-    <form onsubmit="calculateBMI(); return false">
-        <!-- return false page reload honye se roknye k liye (submit honye k baad) single page application-->
-      <!-- height -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
 
-      <label for="inputheightfeet"> Your Height Is = </label>
-      <input required
-        class="inputfield1"
-        type="number"
-        id="inputheightfeet"
-        min="0"
-        max="10"
-        placeholder="feet"
-      />
-      <input required
-        class="inputfield1"
-        type="number"
-        id="inputheightinch"
-        min="0"
-        max="11"
-        placeholder="inch"
-      />
-      <!--5 feet 12 inch hoga to wo 6 feet k equal ho jaye ga -->
-      <br />
-      <!-- weight -->
+<body>
+  <h1>BMI CALCULATER</h1>
 
-      <label for="inputweight"> Your Weight Is = </label>
-      <input required
-        class="inputfield2"
-        type="number"
-        id="inputweight"
-        min="0"
-        max="10"
-        placeholder="85kg"
-      />
-      <button type="submit">Calculate</button>
-    </form>
-  </body>
+  <form onsubmit="calculateBMI(); return false">
+    <!-- return false page reload honye se roknye k liye (submit honye k baad) single page application-->
+    <!-- height -->
+
+    <label for="inputheightfeet"> Your Height Is = </label>
+    <input required step="1" class="inputfield1" type="number" id="inputheightfeet" min="0" max="10"
+      placeholder="feet" /> <!--min0 minus mai nhi dye saktye-->
+    <input required step="1" class="inputfield1" type="number" id="inputheightinch" min="0" max="11"
+      placeholder="inch" />
+    <!--5 feet 12 inch hoga to wo 6 feet k equal ho jaye ga -->
+    <br />
+    <!-- weight -->
+
+    <label for="inputweightkg"> Your Weight Is = </label>
+    <input required step="0.1" class="inputfield2" type="number" id="inputweightkg" min="0" max="200"
+      placeholder="85kg" />
+    <button type="submit">Calculate</button>
+  </form>
+
+  <div id="result"><h2 id="title"></h2><p id="suggestion"></p></div>
+</body>
+
 </html>
